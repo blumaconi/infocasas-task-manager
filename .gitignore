@@ -1,0 +1,39 @@
+# Dependencias
+node_modules/
+vendor/
+
+# Archivos de entorno
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# Archivos de caché
+.cache/
+.phpunit.result.cache
+
+# Archivos de compilación
+/build/
+/dist/
+
+# Archivos del sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos temporales
+*.tmp
+*.temp
+*.bak
