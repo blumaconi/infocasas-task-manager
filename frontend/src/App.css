@@ -1,4 +1,14 @@
-.App {
-  text-align: center;
-  padding: 20px;
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 50px;
 }
+
+.app-content {
+  width: 100%;
+  max-width: 700px;
+}
+
+
