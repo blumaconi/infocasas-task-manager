@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Task;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class TaskController extends Controller
 {
@@ -65,6 +66,11 @@ class TaskController extends Controller
     {
         try {
             return Task::findOrFail($id);
+        } catch (ModelNotFoundException $e) {
+            return response()->json([
+                'error' => 'Task not found',
+                'message' => 'The requested task does not exist'
+            ], 404);
         } catch (QueryException $e) {
             return response()->json([
                 'error' => 'Database connection error',
@@ -85,6 +91,11 @@ class TaskController extends Controller
             ]);
 
             return $task;
+        } catch (ModelNotFoundException $e) {
+            return response()->json([
+                'error' => 'Task not found',
+                'message' => 'The requested task does not exist'
+            ], 404);
         } catch (QueryException $e) {
             return response()->json([
                 'error' => 'Database connection error',
@@ -101,6 +112,11 @@ class TaskController extends Controller
             $task->delete();
 
             return response()->json(['message' => 'Task deleted successfully']);
+        } catch (ModelNotFoundException $e) {
+            return response()->json([
+                'error' => 'Task not found',
+                'message' => 'The requested task does not exist'
+            ], 404);
         } catch (QueryException $e) {
             return response()->json([
                 'error' => 'Database connection error',
