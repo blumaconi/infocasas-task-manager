@@ -40,7 +40,7 @@ function App() {
     return (
       <div className="app-container">
         <div className="app-content">
-          <h1 className="text-center mb-4">Task Manager</h1>
+          <h1 className="text-center app-title">Task Manager</h1>
           
           <TaskForm onSubmit={handleCreateTask} loading={loading} />
           
