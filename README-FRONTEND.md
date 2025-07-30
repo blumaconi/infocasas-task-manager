@@ -92,14 +92,7 @@ El frontend estará disponible en `http://localhost:5173`
 
 ## 🧪 Testing
 
-### Tests unitarios
-- **TaskForm**: 4 tests (rendering, submission, loading states)
-- **SearchBar**: 4 tests (rendering, interactions, controlled component)
-- **FilterToggle**: 5 tests (rendering, interactions, controlled states)
-- **TaskList**: 9 tests (rendering, interactions, modals, delete/edit flows)
-
-### Tests de integración
-- **App Integration**: 5 tests (component rendering, task creation, editing, deletion flows)
+El frontend cuenta con tests unitarios y de integración utilizando Vitest y Testing Library para asegurar el correcto funcionamiento de los componentes, flujos de usuario y manejo de estados.
 
 ### Ejecutar tests
 ```bash
