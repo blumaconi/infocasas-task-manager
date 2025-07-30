@@ -154,3 +154,11 @@ php artisan test --filter=TaskApiTest
 - Manejo de errores de base de datos verificado
 - Todos los endpoints funcionando
 - Filtros y búsqueda probados
+
+## 🛡️ Manejo de Errores
+
+### Backend
+- **Error 500**: QueryException para problemas de conexión a base de datos
+- **Error 422**: Validación de datos de entrada (nombre requerido, longitud máxima)
+- **Error 404**: ModelNotFoundException para tareas inexistentes
+- **Respuestas JSON consistentes**: Todos los errores devuelven estructura uniforme
